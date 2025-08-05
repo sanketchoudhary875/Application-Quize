@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Quiz App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="instructions">
+      <h2>📋 Instructions</h2>
+      <ul>
+        <li>Each question has 4 options.</li>
+        <li>Click one to select your answer.</li>
+        <li>You have 15 seconds per question.</li>
+        <li>Click <b>Start Quiz</b> when you're ready.</li>
+      </ul>
+    </div>
+
+    <div class="quiz-box">
+      <div id="start-screen">
+        <h1>🧠 Ready for a Quiz?</h1>
+        <button onclick="startQuiz()">Start Quiz</button>
+      </div>
+
+      <div id="quiz-screen" class="hide">
+        <div class="top-bar">
+          <span id="question-count"></span>
+          <span id="timer">⏱️ 15</span>
+        </div>
+        <h2 id="question"></h2>
+        <ul id="options"></ul>
+        <div class="navigation">
+          <button onclick="prevQuestion()">Back</button>
+          <button onclick="nextQuestion()">Next</button>
+        </div>
+      </div>
+
+      <div id="result-screen" class="hide">
+        <h2>🎉 Quiz Completed!</h2>
+        <p>Your Score: <span id="score"></span>/10</p>
+        <div id="answers"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
